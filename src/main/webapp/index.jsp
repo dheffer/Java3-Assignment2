@@ -2,11 +2,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Java Assignment 2</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
+    <table border="1">
+        <tr>
+            <th>Test1</th>
+            <th>Test2</th>
+        </tr>
+        <tr>
+            <td><a href="libraryData"></a></td><!-- LibraryData Servlet -->
+            <td>LibraryData servlet</td>
+        </tr>
+    </table>
+<h1><%= "Hello World!" %></h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 </body>

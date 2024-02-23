@@ -1,4 +1,4 @@
-package org.example.assignment2;
+package backend;
 
 import java.sql.*;
 import java.util.ArrayList;
