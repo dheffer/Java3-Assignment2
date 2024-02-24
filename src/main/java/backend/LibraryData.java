@@ -1,4 +1,4 @@
-package org.example.assignment2;
+package backend;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,17 +10,15 @@ import jakarta.servlet.http.HttpServletResponse;
 public class LibraryData extends HttpServlet {
 
     private String msg;
+    public void init() throws ServletException { msg = "Hello World"; }
 
-    public void init() throws ServletException {
-        msg = "Hello World";
+    protected void doGet(HttpServletRequest req, HttpServletResponse res) {
+        res.setContentType("text/html");
+
     }
 
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) {
 
     }
-
-    protected void doGet(HttpServletRequest req, HttpServletResponse res) {
-
-    }
-
 }

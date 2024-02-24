@@ -1,4 +1,4 @@
-package org.example.assignment2;
+package backend;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ public class DatabaseManager {
     private static final String URL = "jdbc:mariadb://localhost:3307/books";
     private static final String USER = "root";
     private static final String PASS = "substance-sloped-spindle";
+
 
     /**
      * Establishes a connection to the database.
@@ -33,6 +34,8 @@ public class DatabaseManager {
      * Retrieves all books from the database.
      * @return An ArrayList of Book objects representing all books in the database.
      */
+    // TODO: fix this
+    /*
     public ArrayList<Book> getAllBooks() {
         ArrayList<Book> bookList = new ArrayList<>();
         try (Connection conn = connect()) {
@@ -41,13 +44,13 @@ public class DatabaseManager {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             // Loop through the result set and add each book to the book list
-            /* TODO: fix this
+
             while (rs.next()) {
                 bookList.add(new Book(rs.getString("isbn"), rs.getString("title"),
                         rs.getInt("editionNumber"), rs.getString("copyRight")));
             }
 
-             */
+
             // Commit the transaction
             conn.commit();
         } catch (SQLException e) {
@@ -55,13 +58,14 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
         return bookList;
-    }
+    }*/
 
     /**
      * Reads a specific book from the database.
      * @param book The Book object to be read from the database.
      * @throws SQLException if the connection fails.
      */
+    /*
     public void readBook(Book book) throws SQLException {
         try (Connection conn = connect()) {
             // SQL query to select a specific book
@@ -80,13 +84,14 @@ public class DatabaseManager {
             // Print the error message if the connection fails
             System.out.println("Failure: " + e.getMessage());
         }
-    }
+    }*/
 
     /**
      * Creates a new book in the database.
      * @param book The Book object to be created in the database.
      * @throws SQLException if the connection fails.
      */
+    /*
     public void createBook(Book book) {
         try (Connection conn = connect()) {
             // SQL query to insert a new book
@@ -104,13 +109,14 @@ public class DatabaseManager {
             // Print the error message if the connection fails
             System.out.println("Failure: " + e.getMessage());
         }
-    }
+    }*/
 
     /**
      * Updates a specific book in the database.
      * @param bookToModify The Book object to be updated in the database.
      * @param book The new Book object with updated details.
      */
+    /*
     public void updateBook(Book bookToModify, Book book) {
         try (Connection conn = connect()) {
             // SQL query to update a specific book
@@ -129,12 +135,13 @@ public class DatabaseManager {
             // Print the error message if the connection fails
             System.out.println("Failure: " + e.getMessage());
         }
-    }
+    }*/
 
     /**
      * Retrieves all authors from the database.
      * @return An ArrayList of Author objects representing all authors in the database.
      */
+    /*
     public ArrayList<Author> readAllAuthors() {
         ArrayList<Author> authorList = new ArrayList<>();
         try (Connection conn = connect()) {
@@ -156,12 +163,14 @@ public class DatabaseManager {
         }
         return authorList;
     }
+    */
 
     /**
      * Reads a specific author from the database.
      * @param id The id of the author to be read from the database.
      * @return An Author object representing the author read from the database.
      */
+    /*
     public Author readAuthor(int id) {
         Author author = null;
         try (Connection conn = connect()) {
@@ -184,11 +193,12 @@ public class DatabaseManager {
         }
         return author;
     }
-
+    */
     /**
      * Creates a new author in the database.
      * @param author The Author object to be created in the database.
      */
+    /*
     public void createAuthor(Author author) {
         try (Connection conn = connect()) {
             // SQL query to insert a new author
@@ -205,12 +215,13 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
-
+    */
     /**
      * Updates a specific author in the database.
      * @param authorToModify The Author object to be updated in the database.
      * @param author The new Author object with updated details.
      */
+    /*
     public void updateAuthor(Author authorToModify, Author author) {
         try (Connection conn = connect()) {
             // SQL query to update a specific author
@@ -229,11 +240,14 @@ public class DatabaseManager {
         }
     }
 
+     */
+
     /**
      * Retrieves the ISBNs of all books written by each author.
      * @param bookList The list of all books.
      * @param authorList The list of all authors.
      */
+    /*
     public void getAuthorISBNs(ArrayList<Book> bookList, ArrayList<Author> authorList) {
         try (Connection conn = connect()) {
             // SQL query to select all entries from the authorISBN table
@@ -259,12 +273,14 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
+    */
 
     /**
      * Adds a new entry to the authorISBN table in the database.
      * @param book The Book object to be added to the authorISBN table.
      * @param authorID The id of the author to be added to the authorISBN table.
      */
+    /*
     public void addToAuthorISBNs(Book book, int authorID) {
         try (Connection conn = connect()) {
             // SQL query to insert a new entry into the authorISBN table
@@ -281,4 +297,6 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
+
+    */
 }
