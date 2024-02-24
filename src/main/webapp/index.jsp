@@ -11,7 +11,7 @@
             <th>Test2</th>
         </tr>
         <tr>
-            <td><a href="libraryData"></a></td><!-- LibraryData Servlet -->
+            <td><a href="librarydata"></a></td><!-- LibraryData Servlet -->
             <td>LibraryData servlet</td>
         </tr>
     </table>

@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name="libraryData", value="/librarydata")
+@WebServlet(name="librarydata", value="/librarydata")
 public class LibraryData extends HttpServlet {
 
     private String msg;
@@ -14,6 +14,7 @@ public class LibraryData extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) {
         res.setContentType("text/html");
+
     }
 
     @Override
