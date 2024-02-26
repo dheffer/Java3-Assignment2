@@ -21,7 +21,6 @@ public class LibraryDataServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         String view = req.getParameter("view_type");
-        System.out.println(view);
         DatabaseManager dbm = new DatabaseManager();
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
