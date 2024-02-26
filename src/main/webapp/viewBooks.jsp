@@ -13,4 +13,7 @@
 <body>
 
 </body>
+<footer>
+    <a href="index.jsp">Return</a>
+</footer>
 </html>

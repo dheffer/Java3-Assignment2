@@ -2,6 +2,7 @@ package backend;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
+import java.util.ArrayList;
 
 // COPIED FROM ASSIGNMENT 1
 public class DatabaseManager {
@@ -137,7 +138,7 @@ public class DatabaseManager {
      * Retrieves all authors from the database.
      * @return An ArrayList of Author objects representing all authors in the database.
      */
-    /*
+
     public ArrayList<Author> readAllAuthors() {
         ArrayList<Author> authorList = new ArrayList<>();
         try (Connection conn = connect()) {
@@ -159,7 +160,6 @@ public class DatabaseManager {
         }
         return authorList;
     }
-    */
 
     /**
      * Reads a specific author from the database.

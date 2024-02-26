@@ -5,10 +5,14 @@
     <title>Java Assignment 2</title>
 </head>
 <body>
-    <table>
+    <table border="1px solid black" cellpadding="4px">
         <tr>
-            <th><a href="addBook.jsp">Add Book</a></th>
-            <th><a href="addAuthor.jsp">Add Author</a></th>
+            <td><a href="addBook.jsp">Add Book</a></td>
+            <td><a href="addAuthor.jsp">Add Author</a></td>
+        </tr>
+        <tr>
+            <td><a href="lib-data?view_type=books">View Books</a></td>
+            <td><a href="lib-data?view_type=authors">View Authors</a></td>
         </tr>
     </table>
 <br/>
