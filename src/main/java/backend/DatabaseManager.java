@@ -1,8 +1,6 @@
 package backend;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Objects;
 
 // COPIED FROM ASSIGNMENT 1
 public class DatabaseManager {

@@ -9,9 +9,16 @@
 <html>
 <head>
     <title>Title</title>
-    <a href="index.jsp">Return</a>
 </head>
 <body>
-
+    <form action="lib-data" method="POST">
+        First Name: <input type="text" name="firstName" required><br/>
+        Last Name:  <input type="text" name="lastName" required><br/>
+        <input type="hidden" id="view" name="view" value="add_author">
+        <input type="submit" value="Add Author">
+    </form>
 </body>
+<footer>
+    <a href="index.jsp">Return</a>
+</footer>
 </html>

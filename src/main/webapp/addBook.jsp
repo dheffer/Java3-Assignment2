@@ -9,9 +9,12 @@
 <html>
 <head>
     <title>Title</title>
-    <a href="index.jsp">Return</a>
+
 </head>
 <body>
 
 </body>
+<footer>
+    <a href="index.jsp">Return</a>
+</footer>
 </html>
