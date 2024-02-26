@@ -1,5 +1,6 @@
 package backend;
 
+import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 
 // COPIED FROM ASSIGNMENT 1
@@ -14,18 +15,15 @@ public class DatabaseManager {
      * Establishes a connection to the database.
      * @return A Connection object representing the database connection.
      */
-    public Connection connect() {
-        Connection conn = null;
+    public Connection connect() throws SQLException {
         try {
             // Attempt to establish a connection to the database
-            conn = DriverManager.getConnection(URL, USER, PASS);
-            // Set auto-commit to false
-            conn.setAutoCommit(false);
-        } catch (SQLException e) {
-            // Print the error message if the connection fails
-            System.out.println("Failure: " + e.getMessage());
+            Class.forName("org.mariadb.jdbc.Driver").getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | InvocationTargetException |
+                 NoSuchMethodException e) {
+            throw new RuntimeException(e);
         }
-        return conn;
+        return DriverManager.getConnection(URL, USER, PASS);
     }
 
     /**
