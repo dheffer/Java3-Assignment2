@@ -1,5 +1,6 @@
 package backend;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -32,16 +33,9 @@ public class LibraryDataServlet extends HttpServlet {
         // VIEW AUTHORS
         else if (view.equals("authors")) {
             ArrayList<Author> authors = dbm.readAllAuthors();
-            out.println("<html><body><h2>Authors</h2>");
-            for (Author author : authors) {
-                        out.println("<p style='font-size:14px'>First Name: " + author.getFirstName() +
-                        " --- Last Name: " + author.getLastName() + "</p>");
-            }
-            out.println("</body>" +
-                    "<footer>" +
-                    "    <a href=\"index.jsp\">Return</a>\n" +
-                    "</footer>" +
-                    "</html>");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("viewAuthors.jsp");
+            req.setAttribute("authors", authors);
+            dispatcher.forward(req, res);
         } else {
             res.sendRedirect("index.jsp");
         }

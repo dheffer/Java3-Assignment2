@@ -7,22 +7,12 @@
 <body>
     <table border="1px solid black" cellpadding="4px">
         <tr>
-            <th><a href="addBook.jsp">Add Book</a></th>
-            <th><a href="addAuthor.jsp">Add Author</a></th>
+            <td><a href="addBook.jsp">Add Book</a></td>
+            <td><a href="addAuthor.jsp">Add Author</a></td>
         </tr>
         <tr>
-            <td>
-                <form action="lib-data" method="GET">
-                    <input type="hidden" id="view_books" name="view_type" value="books" />
-                    <input type="submit" name="view" value="View Books"/>
-                </form>
-            </td>
-            <td>
-                <form action="lib-data" method="GET">
-                    <input type="hidden" id="view_authors" name="view_type" value="authors" />
-                    <input type="submit" name="view" value="View Authors"/>
-                </form>
-            </td>
+            <td><a href="lib-data?view_type=books">View Books</a></td>
+            <td><a href="lib-data?view_type=authors">View Authors</a></td>
         </tr>
     </table>
 <br/>
