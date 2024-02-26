@@ -196,7 +196,7 @@ public class DatabaseManager {
      * Creates a new author in the database.
      * @param author The Author object to be created in the database.
      */
-    /*
+
     public void createAuthor(Author author) {
         try (Connection conn = connect()) {
             // SQL query to insert a new author
@@ -213,7 +213,7 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
-    */
+
     /**
      * Updates a specific author in the database.
      * @param authorToModify The Author object to be updated in the database.

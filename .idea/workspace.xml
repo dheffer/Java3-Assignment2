@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Assignment2:war exploded" />
+      <artifact name="Assignment2:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Basic browsers pages linking">
+    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Can't get this god damn servlet working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backend/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backend/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/LibraryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addAuthor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addAuthor.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addBook.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,26 +65,28 @@
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TomEE Server.Assignment2.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 8.5.99.executor&quot;: &quot;Run&quot;,
-    &quot;Tomcat Server.Tomcat 9.0.86.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;working&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TomEE Server.Assignment2.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.18.executor": "Run",
+    "Tomcat Server.Tomcat 8.5.99.executor": "Run",
+    "Tomcat Server.Tomcat 9.0.86.executor": "Run",
+    "git-widget-placeholder": "working",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/11yom/Proton Drive/dheffer/My files/School/2024-January-April/CP3566-Applied-Java-Programming/Assignment2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\11yom\Proton Drive\dheffer\My files\School\2024-January-April\CP3566-Applied-Java-Programming\Assignment2\src\main\webapp" />
@@ -104,11 +103,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.86" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.86" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Assignment2:war exploded">
+        <artifact name="Assignment2:war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
@@ -188,7 +188,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Assignment2:war exploded" />
+          <artifact name="Assignment2:war" />
         </option>
       </method>
     </configuration>
@@ -224,7 +224,8 @@
       <workItem from="1708797611087" duration="599000" />
       <workItem from="1708809236832" duration="3892000" />
       <workItem from="1708824915979" duration="55000" />
-      <workItem from="1708895706488" duration="7239000" />
+      <workItem from="1708895706488" duration="7387000" />
+      <workItem from="1708909509706" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1">
       <option name="closed" value="true" />
@@ -258,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708823393153</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Can't get this god damn servlet working">
+      <option name="closed" value="true" />
+      <created>1708909023856</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708909023856</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +289,8 @@
     <MESSAGE value="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1. Used Joshs github as reference for beginning to setup index.jsp" />
     <MESSAGE value="Got the basic Tomcat server/servlet working" />
     <MESSAGE value="Basic browsers pages linking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic browsers pages linking" />
+    <MESSAGE value="Can't get this god damn servlet working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can't get this god damn servlet working" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
