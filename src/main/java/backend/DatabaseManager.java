@@ -1,8 +1,7 @@
 package backend;
 
+import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Objects;
 
 // COPIED FROM ASSIGNMENT 1
 public class DatabaseManager {
@@ -16,18 +15,15 @@ public class DatabaseManager {
      * Establishes a connection to the database.
      * @return A Connection object representing the database connection.
      */
-    public Connection connect() {
-        Connection conn = null;
+    public Connection connect() throws SQLException {
         try {
             // Attempt to establish a connection to the database
-            conn = DriverManager.getConnection(URL, USER, PASS);
-            // Set auto-commit to false
-            conn.setAutoCommit(false);
-        } catch (SQLException e) {
-            // Print the error message if the connection fails
-            System.out.println("Failure: " + e.getMessage());
+            Class.forName("org.mariadb.jdbc.Driver").getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | InvocationTargetException |
+                 NoSuchMethodException e) {
+            throw new RuntimeException(e);
         }
-        return conn;
+        return DriverManager.getConnection(URL, USER, PASS);
     }
 
     /**
@@ -198,7 +194,7 @@ public class DatabaseManager {
      * Creates a new author in the database.
      * @param author The Author object to be created in the database.
      */
-    /*
+
     public void createAuthor(Author author) {
         try (Connection conn = connect()) {
             // SQL query to insert a new author
@@ -215,7 +211,7 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
-    */
+
     /**
      * Updates a specific author in the database.
      * @param authorToModify The Author object to be updated in the database.

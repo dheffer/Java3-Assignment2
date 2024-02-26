@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Assignment2:war exploded" />
+      <artifact name="Assignment2:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1. Used Joshs github as reference for beginning to setup index.jsp">
+    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Work on getting it to connect to the database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/LibraryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/LibraryData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -56,60 +55,64 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2cj4b8Gc0GDGa0D2BdYMfvoaI5E" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TomEE Server.Assignment2.executor": "Run",
-    "Tomcat Server.Tomcat 8.5.99.executor": "Run",
-    "Tomcat Server.Tomcat 9.0.86.executor": "Run",
-    "git-widget-placeholder": "working",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TomEE Server.Assignment2.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.18.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 8.5.99.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.86.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;working&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/11yom/Proton Drive/dheffer/My files/School/2024-January-April/CP3566-Applied-Java-Programming/Assignment2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\11yom\Proton Drive\dheffer\My files\School\2024-January-April\CP3566-Applied-Java-Programming\Assignment2\src\main\webapp" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 9.0.86" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.86" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Assignment2:war exploded">
+        <artifact name="Assignment2:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Assignment2_war_exploded" />
+            <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="24f9e717-13c3-4138-89ff-d1b75f5fd7e5" />
+        <option name="BASE_DIRECTORY_NAME" value="f3920f7e-cdb3-4674-a3bb-d60fb669a239" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -117,7 +120,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58737" />
+        <option name="DEBUG_PORT" value="49156" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -182,7 +185,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Assignment2:war exploded" />
+          <artifact name="Assignment2:war" />
         </option>
       </method>
     </configuration>
@@ -212,7 +215,15 @@
       <workItem from="1708735337921" duration="359000" />
       <workItem from="1708735712416" duration="249000" />
       <workItem from="1708735976329" duration="1282000" />
-      <workItem from="1708738104244" duration="1049000" />
+      <workItem from="1708738104244" duration="1839000" />
+      <workItem from="1708783267247" duration="1222000" />
+      <workItem from="1708791851286" duration="141000" />
+      <workItem from="1708797611087" duration="599000" />
+      <workItem from="1708809236832" duration="3892000" />
+      <workItem from="1708824915979" duration="55000" />
+      <workItem from="1708895706488" duration="7387000" />
+      <workItem from="1708909509706" duration="954000" />
+      <workItem from="1708950535517" duration="987000" />
     </task>
     <task id="LOCAL-00001" summary="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1">
       <option name="closed" value="true" />
@@ -230,7 +241,39 @@
       <option name="project" value="LOCAL" />
       <updated>1708727321823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Got the basic Tomcat server/servlet working">
+      <option name="closed" value="true" />
+      <created>1708743686384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708743686384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Basic browsers pages linking">
+      <option name="closed" value="true" />
+      <created>1708823393153</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708823393153</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Can't get this god damn servlet working">
+      <option name="closed" value="true" />
+      <created>1708909023856</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708909023856</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Work on getting it to connect to the database">
+      <option name="closed" value="true" />
+      <created>1708910361394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708910361394</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +293,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1" />
     <MESSAGE value="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1. Used Joshs github as reference for beginning to setup index.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1. Used Joshs github as reference for beginning to setup index.jsp" />
+    <MESSAGE value="Got the basic Tomcat server/servlet working" />
+    <MESSAGE value="Basic browsers pages linking" />
+    <MESSAGE value="Can't get this god damn servlet working" />
+    <MESSAGE value="Work on getting it to connect to the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on getting it to connect to the database" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
