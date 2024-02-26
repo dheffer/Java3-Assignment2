@@ -22,12 +22,6 @@ public class LibraryDataServlet extends HttpServlet {
 
         //Setup the foo for later Session example
         HttpSession session = req.getSession();
-
-        // Hello
-        PrintWriter out = res.getWriter();
-        out.println("<html><body>");
-        out.println("<h1> Delaney Rules <br/>" + msg + "</h1>");
-        out.println("</body></html>");
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
@@ -44,6 +38,18 @@ public class LibraryDataServlet extends HttpServlet {
                     req.getParameter("firstName"),
                     req.getParameter("lastName"))
             );
+
+            res.setContentType("text/html");
+            PrintWriter out = res.getWriter();
+            out.println("<html><body>");
+            out.println("<h2>" + req.getParameter("view") + "</h2>");
+            out.println("<h3>First Name: " + req.getParameter("firstName") + "</h3>");
+            out.println("<h3>Last Name: " + req.getParameter("lastName") + "</h3>");
+            out.println("</body>" +
+                    "<footer>" +
+                    "    <a href=\"index.jsp\">Return</a>\n" +
+                    "</footer>" +
+                    "</html>");
         } else if (view.equals("add_book")) {
 
         } else {

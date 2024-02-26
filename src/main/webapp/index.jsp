@@ -5,7 +5,7 @@
     <title>Java Assignment 2</title>
 </head>
 <body>
-    <table>
+    <table border="1px solid black">
         <tr>
             <th><a href="addBook.jsp">Add Book</a></th>
             <th><a href="addAuthor.jsp">Add Author</a></th>
