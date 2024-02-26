@@ -9,7 +9,9 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URI;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 @WebServlet(name="libData", value="/lib-data")
 public class LibraryDataServlet extends HttpServlet {
@@ -18,16 +20,41 @@ public class LibraryDataServlet extends HttpServlet {
     public void init()  { msg = "Lib-Data Servlet"; }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+        String view = req.getRequestURL().substring(req.getRequestURL().lastIndexOf("/") + 1);
+        System.out.println(view);
+        DatabaseManager dbm = new DatabaseManager();
         res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
 
-        //Setup the foo for later Session example
-        HttpSession session = req.getSession();
+        // VIEW BOOKS
+        if (view.equals("view_books")) {
+            System.out.println("test1");
+        }
+        // VIEW AUTHORS
+        else if (view.equals("view_authors")) {
+            ArrayList<Author> authors = dbm.readAllAuthors();
+            out.println("<html><body>");
+            for (Author author : authors) {
+                out.println("<h2>" + view + "</h2>" +
+                        "<h3>First Name: " + author.getFirstName() + "</h3>" +
+                        "<h3>Last Name: " + author.getLastName() + "</h3>");
+            }
+            out.println("</body>" +
+                    "<footer>" +
+                    "    <a href=\"index.jsp\">Return</a>\n" +
+                    "</footer>" +
+                    "</html>");
+        } else {
+            res.sendRedirect("index.jsp");
+        }
+
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         String view = req.getParameter("view");
-
         DatabaseManager dbm = new DatabaseManager();
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
 
         if (view.equals("add_author")) {;
             System.out.println(new Author(
@@ -38,18 +65,16 @@ public class LibraryDataServlet extends HttpServlet {
                     req.getParameter("firstName"),
                     req.getParameter("lastName"))
             );
-
-            res.setContentType("text/html");
-            PrintWriter out = res.getWriter();
-            out.println("<html><body>");
-            out.println("<h2>" + req.getParameter("view") + "</h2>");
-            out.println("<h3>First Name: " + req.getParameter("firstName") + "</h3>");
-            out.println("<h3>Last Name: " + req.getParameter("lastName") + "</h3>");
-            out.println("</body>" +
-                    "<footer>" +
-                    "    <a href=\"index.jsp\">Return</a>\n" +
-                    "</footer>" +
-                    "</html>");
+            out.println("<html>" +
+                        "<body>" +
+                            "<h2>" + req.getParameter("view") + "</h2>" +
+                            "<h3>First Name: " + req.getParameter("firstName") + "</h3>" +
+                            "<h3>Last Name: " + req.getParameter("lastName") + "</h3>" +
+                        "</body>" +
+                        "<footer>" +
+                        "    <a href=\"index.jsp\">Return</a>\n" +
+                        "</footer>" +
+                        "</html>");
         } else if (view.equals("add_book")) {
 
         } else {
