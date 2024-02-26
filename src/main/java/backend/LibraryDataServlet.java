@@ -20,24 +20,23 @@ public class LibraryDataServlet extends HttpServlet {
     public void init()  { msg = "Lib-Data Servlet"; }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        String view = req.getRequestURL().substring(req.getRequestURL().lastIndexOf("/") + 1);
+        String view = req.getParameter("view_type");
         System.out.println(view);
         DatabaseManager dbm = new DatabaseManager();
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
 
         // VIEW BOOKS
-        if (view.equals("view_books")) {
+        if (view.equals("books")) {
             System.out.println("test1");
         }
         // VIEW AUTHORS
-        else if (view.equals("view_authors")) {
+        else if (view.equals("authors")) {
             ArrayList<Author> authors = dbm.readAllAuthors();
-            out.println("<html><body>");
+            out.println("<html><body><h2>Authors</h2>");
             for (Author author : authors) {
-                out.println("<h2>" + view + "</h2>" +
-                        "<h3>First Name: " + author.getFirstName() + "</h3>" +
-                        "<h3>Last Name: " + author.getLastName() + "</h3>");
+                        out.println("<p style='font-size:14px'>First Name: " + author.getFirstName() +
+                        " --- Last Name: " + author.getLastName() + "</p>");
             }
             out.println("</body>" +
                     "<footer>" +

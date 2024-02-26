@@ -11,8 +11,18 @@
             <th><a href="addAuthor.jsp">Add Author</a></th>
         </tr>
         <tr>
-            <th><a href="viewBooks.jsp">View Books</a></th>
-            <th><a href="viewAuthors.jsp">View Authors</a></th>
+            <td>
+                <form action="lib-data" method="GET">
+                    <input type="hidden" id="view_books" name="view_type" value="books" />
+                    <input type="submit" name="view" value="View Books"/>
+                </form>
+            </td>
+            <td>
+                <form action="lib-data" method="GET">
+                    <input type="hidden" id="view_authors" name="view_type" value="authors" />
+                    <input type="submit" name="view" value="View Authors"/>
+                </form>
+            </td>
         </tr>
     </table>
 <br/>

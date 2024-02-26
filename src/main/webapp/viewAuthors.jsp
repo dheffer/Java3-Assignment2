@@ -11,7 +11,6 @@
     <title>View Authors</title>
 </head>
 <body>
-<% request.setAttribute("view", "view_authors"); %>
 </body>
 <footer>
     <a href="index.jsp">Return</a>

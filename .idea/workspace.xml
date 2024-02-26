@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Authors can succesfully be added to the database">
+    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Trying to get &quot;viewAuthors&quot; to work, but I am failing miserably">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/viewAuthors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewAuthors.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/viewBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewBooks.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +225,7 @@
       <workItem from="1708824915979" duration="55000" />
       <workItem from="1708895706488" duration="7387000" />
       <workItem from="1708909509706" duration="954000" />
-      <workItem from="1708950535517" duration="7239000" />
+      <workItem from="1708950535517" duration="8738000" />
     </task>
     <task id="LOCAL-00001" summary="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1">
       <option name="closed" value="true" />
@@ -293,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708953017418</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Trying to get &quot;viewAuthors&quot; to work, but I am failing miserably">
+      <option name="closed" value="true" />
+      <created>1708957895285</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708957895285</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +325,8 @@
     <MESSAGE value="Work on getting it to connect to the database" />
     <MESSAGE value="FINALLY GOT THE DATABASE CONNECTION WORKING!!!!!!!!!" />
     <MESSAGE value="Authors can succesfully be added to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authors can succesfully be added to the database" />
+    <MESSAGE value="Trying to get &quot;viewAuthors&quot; to work, but I am failing miserably" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to get &quot;viewAuthors&quot; to work, but I am failing miserably" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
