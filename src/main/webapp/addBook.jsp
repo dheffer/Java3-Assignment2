@@ -8,11 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-
+    <title>Add Book</title>
 </head>
 <body>
-
+<form action="lib-data" method="POST">
+    ISBN: <input type="text" name="isbn" required><br/>
+    Title:  <input type="text" name="title" required><br/>
+    Edition: <input type="text" name="edition" required><br/>
+    Copyright:  <input type="text" name="copyright" required><br/>
+    <input type="hidden" id="view" name="view" value="add_book">
+    <input type="submit" value="Add Book">
+</form>
 </body>
 <footer>
     <a href="index.jsp">Return</a>

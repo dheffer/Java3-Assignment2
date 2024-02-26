@@ -85,7 +85,7 @@ public class DatabaseManager {
      * @param book The Book object to be created in the database.
      * @throws SQLException if the connection fails.
      */
-    /*
+
     public void createBook(Book book) {
         try (Connection conn = connect()) {
             // SQL query to insert a new book
@@ -103,7 +103,7 @@ public class DatabaseManager {
             // Print the error message if the connection fails
             System.out.println("Failure: " + e.getMessage());
         }
-    }*/
+    }
 
     /**
      * Updates a specific book in the database.

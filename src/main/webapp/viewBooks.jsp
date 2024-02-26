@@ -43,6 +43,7 @@
             <th>Copyright</th>
         </tr>
         <%
+            //TODO: make AuthorList for a book display
             for (Book book : bookList) {
                 out.println(
                         "<tr>" +

@@ -41,6 +41,7 @@
             <th>Last Name</th>
         </tr>
         <%
+            //TODO: make BookList for an author display
             for (Author author : authorList) {
                 out.println("<tr>" +
                                 "<td>" + author.getAuthorID() + "</td>" +

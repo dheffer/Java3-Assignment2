@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="Used Joshs files as reference. ViewAuthors is now fully functional with a .jsp page">
+    <list default="true" id="43cb92fd-29d7-4f18-b5d8-22a70ba76ec9" name="Changes" comment="ViewAuthors and ViewBooks is now super pretty and fully functional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/backend/LibraryDataServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addAuthor.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addAuthor.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addBook.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addBook.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/viewAuthors.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewAuthors.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/viewBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewBooks.jsp" afterDir="false" />
     </list>
@@ -231,7 +233,8 @@
       <workItem from="1708961829689" duration="1616000" />
       <workItem from="1708966731897" duration="2996000" />
       <workItem from="1708974144916" duration="559000" />
-      <workItem from="1708980251053" duration="2015000" />
+      <workItem from="1708980251053" duration="2664000" />
+      <workItem from="1708984765429" duration="1951000" />
     </task>
     <task id="LOCAL-00001" summary="Removed HelloServlet.java. Copied DatabaseManager.java from Assignment1">
       <option name="closed" value="true" />
@@ -329,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708969601164</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ViewAuthors and ViewBooks is now super pretty and fully functional">
+      <option name="closed" value="true" />
+      <created>1708982315270</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708982315270</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +370,8 @@
     <MESSAGE value="viewAuthors is fully functional, although it doesn't use the JSP (so may need to fix it up)" />
     <MESSAGE value="x" />
     <MESSAGE value="Used Joshs files as reference. ViewAuthors is now fully functional with a .jsp page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Used Joshs files as reference. ViewAuthors is now fully functional with a .jsp page" />
+    <MESSAGE value="ViewAuthors and ViewBooks is now super pretty and fully functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="ViewAuthors and ViewBooks is now super pretty and fully functional" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

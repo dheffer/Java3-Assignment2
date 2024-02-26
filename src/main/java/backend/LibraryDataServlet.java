@@ -53,10 +53,6 @@ public class LibraryDataServlet extends HttpServlet {
         PrintWriter out = res.getWriter();
 
         if (view.equals("add_author")) {;
-            System.out.println(new Author(
-                    req.getParameter("firstName"),
-                    req.getParameter("lastName"))
-            );
             dbm.createAuthor(new Author(
                     req.getParameter("firstName"),
                     req.getParameter("lastName"))
@@ -72,9 +68,34 @@ public class LibraryDataServlet extends HttpServlet {
                         "</footer>" +
                         "</html>");
         } else if (view.equals("add_book")) {
-
+            dbm.createBook(new Book(
+                    req.getParameter("isbn"),
+                    req.getParameter("title"),
+                    Integer.parseInt(req.getParameter("edition")),
+                    req.getParameter("copyright"))
+            );
+            out.println(
+                    "<html>" +
+                    "<body>" +
+                        "<h2>" + req.getParameter("view") + "</h2>" +
+                        "<h3>ISBN: " + req.getParameter("isbn") + "</h3>" +
+                        "<h3>Title: " + req.getParameter("title") + "</h3>" +
+                        "<h3>Edition: " + req.getParameter("edition") + "</h3>" +
+                        "<h3>CopyRight: " + req.getParameter("copyRight") + "</h3>" +
+                    "</body>" +
+                    "<footer>" +
+                    "    <a href=\"index.jsp\">Return</a>\n" +
+                    "</footer>" +
+                    "</html>");
         } else {
-
+            out.println("<html>" +
+                        "<body>" +
+                            "<h2>Invalid View</h2>" +
+                        "</body>" +
+                        "<footer>" +
+                        "    <a href=\"index.jsp\">Return</a>\n" +
+                        "</footer>" +
+                        "</html>");
         }
     }
 
