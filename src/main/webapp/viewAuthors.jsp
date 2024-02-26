@@ -13,18 +13,45 @@
 <html>
 <head>
     <title>View Authors</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h3>Authors</h3>
     <% ArrayList<Author> authorList = (ArrayList<Author>)request.getAttribute("authors"); %>
-    <%
-    for (Author author : authorList) {
-        out.println("<p style='font-size:14px'>First Name: " + author.getFirstName() +
-            " --- Last Name: " + author.getLastName() + "</p>");
-    }
-    %>
+    <table>
+        <tr>
+            <th>Author ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <%
+            for (Author author : authorList) {
+                out.println("<tr>" +
+                                "<td>" + author.getAuthorID() + "</td>" +
+                                "<td>" + author.getFirstName() + "</td>" +
+                                "<td>" + author.getLastName() + "</td>" +
+                            "</tr>");
+            }
+        %>
+    </table>
 </body>
 <footer>
-    <a href="index.jsp">Return</a>
+    <br><a href="index.jsp">Return</a>
 </footer>
 </html>
