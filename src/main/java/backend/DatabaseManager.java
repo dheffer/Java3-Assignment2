@@ -31,8 +31,6 @@ public class DatabaseManager {
      * Retrieves all books from the database.
      * @return An ArrayList of Book objects representing all books in the database.
      */
-    // TODO: fix this
-    /*
     public ArrayList<Book> getAllBooks() {
         ArrayList<Book> bookList = new ArrayList<>();
         try (Connection conn = connect()) {
@@ -43,11 +41,10 @@ public class DatabaseManager {
             // Loop through the result set and add each book to the book list
 
             while (rs.next()) {
-                bookList.add(new Book(rs.getString("isbn"), rs.getString("title"),
-                        rs.getInt("editionNumber"), rs.getString("copyRight")));
+                Book book = new Book(rs.getString("isbn"), rs.getString("title"),
+                        rs.getInt("editionNumber"), rs.getString("copyRight"));
+                bookList.add(book);
             }
-
-
             // Commit the transaction
             conn.commit();
         } catch (SQLException e) {
@@ -55,7 +52,7 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
         return bookList;
-    }*/
+    }
 
     /**
      * Reads a specific book from the database.

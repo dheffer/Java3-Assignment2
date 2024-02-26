@@ -25,15 +25,19 @@ public class LibraryDataServlet extends HttpServlet {
         DatabaseManager dbm = new DatabaseManager();
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
+        RequestDispatcher dispatcher;
 
         // VIEW BOOKS
         if (view.equals("books")) {
-            System.out.println("test1");
+            ArrayList<Book> books = dbm.getAllBooks();
+            dispatcher = req.getRequestDispatcher("viewBooks.jsp");
+            req.setAttribute("books", books);
+            dispatcher.forward(req, res);
         }
         // VIEW AUTHORS
         else if (view.equals("authors")) {
             ArrayList<Author> authors = dbm.readAllAuthors();
-            RequestDispatcher dispatcher = req.getRequestDispatcher("viewAuthors.jsp");
+            dispatcher = req.getRequestDispatcher("viewAuthors.jsp");
             req.setAttribute("authors", authors);
             dispatcher.forward(req, res);
         } else {
