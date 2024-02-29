@@ -3,6 +3,7 @@ package backend;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 // COPIED FROM ASSIGNMENT 1
 public class DatabaseManager {
@@ -163,7 +164,7 @@ public class DatabaseManager {
      * @param id The id of the author to be read from the database.
      * @return An Author object representing the author read from the database.
      */
-    /*
+
     public Author readAuthor(int id) {
         Author author = null;
         try (Connection conn = connect()) {
@@ -186,7 +187,7 @@ public class DatabaseManager {
         }
         return author;
     }
-    */
+
     /**
      * Creates a new author in the database.
      * @param author The Author object to be created in the database.
@@ -240,7 +241,7 @@ public class DatabaseManager {
      * @param bookList The list of all books.
      * @param authorList The list of all authors.
      */
-    /*
+
     public void getAuthorISBNs(ArrayList<Book> bookList, ArrayList<Author> authorList) {
         try (Connection conn = connect()) {
             // SQL query to select all entries from the authorISBN table
@@ -266,14 +267,14 @@ public class DatabaseManager {
             System.out.println("Failure: " + e.getMessage());
         }
     }
-    */
+
 
     /**
      * Adds a new entry to the authorISBN table in the database.
      * @param book The Book object to be added to the authorISBN table.
      * @param authorID The id of the author to be added to the authorISBN table.
      */
-    /*
+
     public void addToAuthorISBNs(Book book, int authorID) {
         try (Connection conn = connect()) {
             // SQL query to insert a new entry into the authorISBN table
@@ -291,5 +292,26 @@ public class DatabaseManager {
         }
     }
 
-    */
+    //TODO: create author object, return it to the library data servlet
+    public int getAuthor(Author author) {
+        int id = 0;
+        try (Connection conn = connect()) {
+            // SQL query to select the next authorID
+            String sql = "SELECT authorID FROM authors WHERE firstName = ? AND lastName = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, author.getFirstName());
+            ps.setString(2, author.getLastName());
+            ResultSet rs = ps.executeQuery();
+            // Loop through the result set and add each book to the corresponding author's book list
+            while (rs.next()) {
+                id = (rs.getInt("authorID"));
+            }
+            // Commit the transaction
+            conn.commit();
+        } catch (SQLException e) {
+            // Print the error message if the connection fails
+            System.out.println("Failure: " + e.getMessage());
+        }
+        return id;
+    }
 }

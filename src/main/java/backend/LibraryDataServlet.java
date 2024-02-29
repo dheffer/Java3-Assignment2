@@ -68,12 +68,15 @@ public class LibraryDataServlet extends HttpServlet {
                         "</footer>" +
                         "</html>");
         } else if (view.equals("add_book")) {
-            dbm.createBook(new Book(
+            Book book = new Book(
                     req.getParameter("isbn"),
                     req.getParameter("title"),
                     Integer.parseInt(req.getParameter("edition")),
-                    req.getParameter("copyright"))
-            );
+                    req.getParameter("copyright"));
+            Author author = dbm.readAuthor(Integer.parseInt(req.getParameter("author")));
+
+            dbm.createBook(book);
+            dbm.addToAuthorISBNs(book, author.getAuthorID());
             out.println(
                     "<html>" +
                     "<body>" +
@@ -81,7 +84,8 @@ public class LibraryDataServlet extends HttpServlet {
                         "<h3>ISBN: " + req.getParameter("isbn") + "</h3>" +
                         "<h3>Title: " + req.getParameter("title") + "</h3>" +
                         "<h3>Edition: " + req.getParameter("edition") + "</h3>" +
-                        "<h3>CopyRight: " + req.getParameter("copyRight") + "</h3>" +
+                        "<h3>CopyRight: " + req.getParameter("copyright") + "</h3>" +
+                        "<h3>Author ID: " + req.getParameter("author") +
                     "</body>" +
                     "<footer>" +
                     "    <a href=\"index.jsp\">Return</a>\n" +

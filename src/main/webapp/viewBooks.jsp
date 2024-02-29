@@ -1,6 +1,8 @@
 <%@ page import="java.util.Objects" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="backend.Book" %>
+<%@ page import="backend.DatabaseManager" %>
+<%@ page import="backend.Author" %>
 <%--
   Created by IntelliJ IDEA.
   User: 11yom
@@ -33,7 +35,9 @@
 </head>
 <body>
     <h3>Books</h3>
-    <% ArrayList<Book> bookList = (ArrayList<Book>)request.getAttribute("books"); %>
+    <%
+    ArrayList<Book> bookList = (ArrayList<Book>)request.getAttribute("books");
+    %>
 
     <table>
         <tr>
@@ -41,9 +45,13 @@
             <th>Title</th>
             <th>Edition</th>
             <th>Copyright</th>
+            <th>Author List</th>
         </tr>
         <%
             //TODO: make AuthorList for a book display
+            DatabaseManager db = new DatabaseManager();
+            ArrayList<Author> authorList = db.readAllAuthors();
+            db.getAuthorISBNs(bookList, authorList);
             for (Book book : bookList) {
                 out.println(
                         "<tr>" +
@@ -51,6 +59,7 @@
                             "<td>" + book.getTitle() + "</td>" +
                             "<td>" + book.getEditionNumber() + "</td>" +
                             "<td>" + book.getCopyright() + "</td>" +
+                            "<td>" + book.getAuthorList() + "</td>" +
                         "</tr>"
                 );
             }
