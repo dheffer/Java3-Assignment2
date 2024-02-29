@@ -1,6 +1,8 @@
 <%@ page import="java.util.Objects" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="backend.Author" %>
+<%@ page import="backend.DatabaseManager" %>
+<%@ page import="backend.Book" %>
 <%--
   Created by IntelliJ IDEA.
   User: 11yom
@@ -39,14 +41,20 @@
             <th>Author ID</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Book List</th>
         </tr>
         <%
+            //TODO: make BookList for an author display
+            DatabaseManager db = new DatabaseManager();
+            ArrayList<Book> bookList = db.getAllBooks();
+            db.getAuthorISBNs(bookList, authorList);
             for (Author author : authorList) {
                 out.println("<tr>" +
                                 "<td>" + author.getAuthorID() + "</td>" +
                                 "<td>" + author.getFirstName() + "</td>" +
                                 "<td>" + author.getLastName() + "</td>" +
-                            "</tr>");
+                                "<td>" + author.getBookList() + "</td>" +
+                        "</tr>");
             }
         %>
     </table>
